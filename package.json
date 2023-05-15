@@ -1,0 +1,17 @@
+{
+  "name": "cli-helper",
+  "author": "Abdullah Altahery",
+  "license": "MIT",
+  "version": "1.0.0",
+  "description": "Unofficial Google Bard linux cli helper . ",
+  "main": "src/cli.js",
+  "bin": {
+    "cli-helper": "src/cli.js"
+  },
+  "dependencies": {
+    "args-parser": "^1.3.0",
+    "https": "^1.0.0",
+    "node-fetch": "^2.6.7",
+    "url": "^0.11.0"
+  }
+}
