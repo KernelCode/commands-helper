@@ -32,12 +32,15 @@ npm install -g commands-helper
 
 Simple Usage
 
-```javascript
-// Command
+```bash
+#Example 1 :
 commands-helper --q="convert avi to mp4 with acc audio format using ffmpeg"
-// Response
-// Use command :
-// - ffmpeg -i input.avi -c:v libx264 -c:a aac -strict experimental -b:a 128k output.mp4
+ffmpeg -i input.avi -c:v libx264 -c:a aac -strict experimental -b:a 128k output.mp4
+
+#Example 2 :
+commands-helper --q="extract the string 'switch' from all txt and js files"
+find . -type f -name '*.txt' -exec grep -i switch {} + | sed 's/.*switch//g'
+
 ```
 
 ## License
