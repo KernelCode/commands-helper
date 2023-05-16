@@ -26,7 +26,7 @@ function readToken(token) {
   }
   if (!fs.existsSync(".token")) {
     console.log("Please Enter your Google Bard token!  help: https://....");
-    console.log("\x1b[1m%s\x1b[0m", 'cliai --set-token="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"');
+    console.log("\x1b[1m%s\x1b[0m", 'commands-helper --set-token="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"');
     process.exit();
   }
   return fs.readFileSync(".token", {

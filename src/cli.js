@@ -5,7 +5,7 @@ const Bard = new (require("./bard.ai.core"))(args);
 const q = args.q;
 
 if (!q) {
-  console.log('using : cliai --q="list all files in root dir?"');
+  console.log('using : commands-helper --q="list all files in root dir?"');
   process.exit();
 }
 Bard.getAnswer(
