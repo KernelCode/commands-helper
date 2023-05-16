@@ -2,7 +2,7 @@
   "name": "commands-helper",
   "author": "Abdullah Altahery",
   "license": "MIT",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Unofficial Google Bard linux cli helper . ",
   "main": "src/cli.js",
   "bin": {
