@@ -17,7 +17,7 @@ Never expose the `__Secure-1PSID` for your safety.
 The latest stable release can be installed from NPM :
 
 ```
-npm install -g cli-helper
+npm install -g cliai
 ```
 
 <br>
@@ -34,7 +34,7 @@ Simple Usage
 
 ```javascript
 // Command
-cli-helper --q="convert avi to mp4 with acc audio format using ffmpeg"
+cliai --q="convert avi to mp4 with acc audio format using ffmpeg"
 // Response
 // Use command :
 // - ffmpeg -i input.avi -c:v libx264 -c:a aac -strict experimental -b:a 128k output.mp4
@@ -56,7 +56,7 @@ Sincerely grateful for any reports on new features or bugs. Your valuable feedba
 
 ## Reference
 
-[1] https://github.com/kernelcode/cli-helper
+[1] https://github.com/kernelcode/cliai
 
 ### Important Warning: All legal responsibilities associated with the use of the package lie with the user.
 

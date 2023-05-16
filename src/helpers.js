@@ -3,7 +3,7 @@ const fs = require("fs");
 function formatJSONText(inputString) {
   // Define the marker string
   let marker = "```json";
-  // some times it starts with ```
+  // sometimes it starts with ```
   if (inputString.indexOf(marker) === -1) marker = "```";
 
   // Find the start and end indexes of the JSON string
@@ -26,7 +26,7 @@ function readToken(token) {
   }
   if (!fs.existsSync(".token")) {
     console.log("Please Enter your Google Bard token!  help: https://....");
-    console.log("\x1b[1m%s\x1b[0m", 'cli-helper --set-token="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"');
+    console.log("\x1b[1m%s\x1b[0m", 'cliai --set-token="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"');
     process.exit();
   }
   return fs.readFileSync(".token", {

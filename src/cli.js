@@ -1,12 +1,11 @@
 #!/usr/bin/env node
-
+const { formatJSONText } = require("./helpers");
 const args = require("args-parser")(process.argv);
 const Bard = new (require("./bard.ai.core"))(args);
 const q = args.q;
-const { formatJSONText } = require("./helpers");
 
 if (!q) {
-  console.log('using : cli-helper --q="list all files in root dir?"');
+  console.log('using : cliai --q="list all files in root dir?"');
   process.exit();
 }
 Bard.getAnswer(
