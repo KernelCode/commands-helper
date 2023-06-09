@@ -2,6 +2,7 @@
 const { formatJSONText } = require("./helpers");
 const args = require("args-parser")(process.argv);
 const Bard = new (require("./bard.ai.core"))(args);
+const fs = require("fs");
 const q = args.q;
 
 if (!q) {
@@ -17,6 +18,12 @@ Bard.getAnswer(
   my question is : ${q}?`
 )
   .then((res) => {
+    if (res.content.includes("Response Error")) {
+      fs.unlinkSync(".token");
+      console.log("Your Google Bard token is invaled!");
+      console.log("\x1b[1m%s\x1b[0m", 'commands-helper --set-token="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"');
+      process.exit(1);
+    }
     const command = formatJSONText(res.content + "");
     console.log("Use command : ");
     console.log("\x1b[1m%s\x1b[0m", "- " + command);

@@ -25,7 +25,7 @@ function readToken(token) {
     return token;
   }
   if (!fs.existsSync(".token")) {
-    console.log("Please Enter your Google Bard token!  help: https://....");
+    console.log("Please Enter your Google Bard token!  help: https://github.com/KernelCode/commands-helper");
     console.log("\x1b[1m%s\x1b[0m", 'commands-helper --set-token="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"');
     process.exit();
   }
