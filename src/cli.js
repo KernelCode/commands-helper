@@ -1,13 +1,14 @@
 #!/usr/bin/env node
 
 const args = require("args-parser")(process.argv);
-
+const path = require("path");
 const fs = require("fs");
 const os = require("os");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
+const apiKeyPath = path.join(__dirname, ".api-key");
 const q = args.q;
 if (args["set-api-key"]) {
-  fs.writeFileSync(".api-key", args["set-api-key"]);
+  fs.writeFileSync(apiKeyPath, args["set-api-key"]);
   console.log("API Key saved!");
   process.exit(0);
 }
@@ -17,15 +18,15 @@ if (!q) {
 }
 function readApiKey(apikey) {
   if (apikey) {
-    fs.writeFileSync(".api-key", apikey);
+    fs.writeFileSync(apiKeyPath, apikey);
     return apikey;
   }
-  if (!fs.existsSync(".api-key")) {
+  if (!fs.existsSync(apiKeyPath)) {
     console.log("Set Your Google Generative API_KEY using");
     console.log("\x1b[1m%s\x1b[0m", 'commands-helper --set-api-key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"');
     process.exit(0);
   }
-  return fs.readFileSync(".api-key", {
+  return fs.readFileSync(apiKeyPath, {
     encoding: "utf-8",
   });
 }
