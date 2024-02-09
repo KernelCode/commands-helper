@@ -2,7 +2,7 @@
 
 <br>
 
-> A package help you getting ai suggestions using Google Gimini
+> A package help you getting cli ai suggestions using Google Gimini
 
 <br>
 
