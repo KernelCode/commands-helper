@@ -2,7 +2,7 @@
   "name": "commands-helper",
   "author": "Abdullah Altahery",
   "license": "MIT",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Google Google Generative AI (Gimini) cli helper . ",
   "main": "src/cli.js",
   "bin": {
